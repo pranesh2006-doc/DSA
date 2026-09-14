@@ -1,47 +1,46 @@
 class Solution {
-   static void merge(int[] arr,int l,int r){
-    if(l>=r){
-        return ;
-    }
-    int mid=l+(r-l)/2;
-    merge(arr,l,mid);
-    merge(arr,mid+1,r);
-    mergesort(arr,l,mid,r);
-   }
-   static void mergesort(int[] arr,int l,int mid,int r){
-    int[] k=new int[r-l+1];
-    int h=0;
-    int i=l;
-    int j=mid+1;
-    while(i<=mid && j<=r){
-
-    if(arr[i]<=arr[j]){
-       k[h++]=arr[i]; 
-       i++;
-    }else{
-        k[h++]=arr[j];
-        j++;
-    }
-    }
-    while(i<=mid){
-        k[h++]=arr[i];
-        i++;
-        
-    }
-    while(j<=r){
-        k[h++]=arr[j];
-        j++;
-    }
-    for(i=l,h=0;i<=r;h++,i++){
-        arr[i]=k[h];
-    }
-   }
-
-    public int[] sortArray(int[] nums) {
-       int l=0;
-       int r=nums.length-1;
-       merge(nums,l,r);   
-       return nums;
-    }
+       
+       public void mergesort(int[] arr,int l,int h){
+        if(l<h){
+            int mid=l+(h-l)/2;
+            mergesort(arr,l,mid);
+            mergesort(arr,mid+1,h);
+            merge(arr,l,mid,h);
+        }
+       }
+       public void merge(int[] arr,int l,int mid,int h){
+        int i=l;
+        int j=mid+1;
+        int k=0;
+        int[] temp=new int[h+1];
+        while(i<=mid && j<=h){
+            if(arr[i]<=arr[j]){
+                temp[k]=arr[i];
+                i++;
+            }else{
+                temp[k]=arr[j];
+                j++;
+            }
+            k++;
+        }
+        while(i<=mid){
+            temp[k]=arr[i];
+            i++;
+            k++;
+        }
+        while(j<=h){
+            temp[k]=arr[j];
+            j++;
+            k++;
+        }
+        for(i=l,k=0;i<=h;i++,k++){
+            arr[i]=temp[k];
+        }
+       }
+     public int[] sortArray(int[] nums) {
+     int n=nums.length-1;
+     mergesort(nums,0,n);
+     return nums;
+}
 
 }
