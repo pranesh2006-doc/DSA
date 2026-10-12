@@ -34,7 +34,15 @@ class chessboard{
         int[][] directions={{-1,0},{1,0},{0,-1},{0,1},
                             {-1,-1},{-1,1},{1,-1},{1,1}};
 
-                            
-        //check if the king is in check
+
+      List<List<Integer>> result=new ArrayList<>();
+
+      //check directions for king movement
+      for(int i=0;i<directions.length;i++){
+        int row=king[0]+directions[i][0];
+        int col=king[1]+directions[i][1];
+
+        //check if the position is within the chessboard
+      }
     }
 }
