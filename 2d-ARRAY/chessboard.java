@@ -43,6 +43,20 @@ class chessboard{
         int col=king[1]+directions[i][1];
 
         //check if the position is within the chessboard
-      }
+            
+        while(row>=0 && row<8 && col>=0 && col<8){
+            //check if the position is not occupied by a queen
+            if(board[row][col]==true){
+                List<Integer>position=new ArrayList<>();
+                position.add(row);
+                position.add(col);
+                result.add(position);
+                break;
+
+            }
+           row=row+directions[i][0];
+         col=col+directions[i][1];
     }
-}
+    }
+
+    }}
