@@ -58,5 +58,7 @@ class chessboard{
          col=col+directions[i][1];
     }
     }
-
+     //print the result
+     System.out.println(result);
+     sc.close();
     }}
