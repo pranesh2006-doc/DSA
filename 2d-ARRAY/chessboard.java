@@ -14,6 +14,13 @@ class chessboard{
             queens[i][0]=sc.nextInt();
             queens[i][1]=sc.nextInt();
         }
+        //get king position
+        int[] king =new int[2];
+        // Get king position
+        king[0]=sc.nextInt();
+        king[1]=sc.nextInt();
+
         
+
     }
 }
