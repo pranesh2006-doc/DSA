@@ -21,13 +21,20 @@ class chessboard{
         king[1]=sc.nextInt();
  
         //create a chessboard
-        int[][] board=new int[8][8];
+        boolean[][] board=new boolean[8][8];
 
         //mark the positions of queens on the chessboard
         for(int i=0;i<n;i++){
             int row=queens[i][0];
             int col=queens[i][1];
-            board[row][col]=1;
+            board[row][col]=true;
+        }
+
+        //eight possible direction for king movement
+        int[][] directions={{-1,0},{1,0},{0,-1},{0,1},
+                            {-1,-1},{-1,1},{1,-1},{1,1}};
+
+                            
+        //check if the king is in check
     }
-}
 }
