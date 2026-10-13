@@ -15,7 +15,12 @@ public class Bubblesort {
                     arr1[j+1]=temp;
                 }
             }
+            for(int k=0;k<n;k++){
+                System.out.print(arr1[k]+" ");
+            }
+            System.out.println();
         }
 
+        
 }
 }
