@@ -20,7 +20,10 @@ public class Bubblesort {
             }
             System.out.println();
         }
+            for(int k=0;k<n;k++){
+                System.out.print(arr1[k]+" ");
+            }
+            System.out.println();
+        }
 
-        
-}
 }
