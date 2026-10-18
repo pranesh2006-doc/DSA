@@ -12,7 +12,8 @@ public class queue {
         System.out.println("Front element: "+queue.peek());
         System.out.println("Removed element: "+queue.poll());
         System.out.println("Queue after the poll operation: "+queue);
-       
+        System.out.println("Is queue empty? "+queue.isEmpty());
+        System.out.println("Size of queue: "+queue.size());
         
     }
 }
