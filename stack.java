@@ -9,7 +9,7 @@ public class stack {
         stack.push(7);
         System.out.println("Stack: " + stack);
         System.out.println("Top element: " + stack.peek());
-       
+        System.out.println("Popped element: " + stack.pop());
     }
     
 }
