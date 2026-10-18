@@ -8,6 +8,7 @@ public class stack {
         stack.push(5);
         stack.push(7);
         System.out.println("Stack: " + stack);
+        System.out.println("Top element: " + stack.peek());
        
     }
     
