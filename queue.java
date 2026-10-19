@@ -1,19 +1,30 @@
-import java.util.ArrayDeque;
-import java.util.Queue;
+import java.util.*;
 
 public class queue {
     public static void main(String[] args){
-        Queue<Integer> queue=new ArrayDeque<>();
+        Scanner sc = new Scanner(System.in);
+        Myqueue queue = new Myqueue();
+         
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            System.out.println("1 for push 2 for pop 3 for peek 4 for isEmpty");
+            int choice=sc.nextInt();
+            switch(choice){
+                case 1:
+                    int value=sc.nextInt();
+                    queue.push(value);
+                    break;
+                case 2:
+                    System.out.println(queue.pop());
+                    break;
+                case 3:
+                    System.out.println(queue.peek());
+                    break;
+                case 4:
+                    System.out.println(queue.isEmpty());
+                    break;
+            }
 
-        queue.offer(3);
-        queue.offer(5);
-        queue.offer(7);
-        System.out.println("Queue: "+queue);
-        System.out.println("Front element: "+queue.peek());
-        System.out.println("Removed element: "+queue.poll());
-        System.out.println("Queue after the poll operation: "+queue);
-        System.out.println("Is queue empty? "+queue.isEmpty());
-        System.out.println("Size of queue: "+queue.size());
-        
-    }
-}
+        }
+
+    }}
