@@ -13,7 +13,14 @@ public class monotonicqueue {
     }
     public static void main(String[] args){
      monotonicqueue mq = new monotonicqueue();
-     Scanner sc = new Scanner(System.in);
+    
+     mq.add(5);
+        mq.add(3);
+        mq.display();
+        mq.add(6);
+        mq.display();
+        mq.add(7);
+    
     }
     
 }
