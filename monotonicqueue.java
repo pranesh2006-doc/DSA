@@ -8,7 +8,9 @@ public class monotonicqueue {
         }
         deque.offerLast(value);
     }
-    
+    void display(){
+        System.out.println(deque);
+    }
     public static void main(String[] args){
      
     }
