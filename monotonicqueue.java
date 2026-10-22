@@ -12,7 +12,8 @@ public class monotonicqueue {
         System.out.println(deque);
     }
     public static void main(String[] args){
-     
+     monotonicqueue mq = new monotonicqueue();
+     Scanner sc = new Scanner(System.in);
     }
     
 }
