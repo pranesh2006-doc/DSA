@@ -20,6 +20,7 @@ public class monotonicqueue {
         mq.add(6);
         mq.display();
         mq.add(7);
+        mq.display();
     
     }
     
